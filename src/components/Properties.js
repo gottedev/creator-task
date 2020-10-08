@@ -15,7 +15,6 @@ import "swiper/components/scrollbar/scrollbar.scss";
 SwiperCore.use([Navigation, Pagination]);
 
 function Properties({ data, isAdmin, handleModel }) {
-  console.log(data);
   let updatedData = [];
 
   for (let key in data) {

@@ -27,7 +27,6 @@ function App() {
   Modal.setAppElement("#modal");
 
   useEffect(() => {
-    console.log("in effect");
     const fetchData = async () => {
       try {
         const properties = await getProperties();
