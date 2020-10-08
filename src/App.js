@@ -126,7 +126,6 @@ function App() {
     };
     updateProperty(propertyDetails);
     setForceRefresh(!forceRefresh);
-    // setToggleModel(!toggleModel);
   };
 
   return (
