@@ -1,0 +1,90 @@
+@import "../variables.scss";
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.properties-container {
+  position: relative;
+  width: 80%;
+  .swiper-container {
+    position: static;
+    .swiper-pagination,
+    .swiper-pagination-bullets {
+      text-align: left;
+      bottom: -15px;
+    }
+    .swiper-slide {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    --swiper-theme-color: red;
+  }
+  .box-container {
+    width: 40%;
+    height: 90%;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    transform: translate(-30%, -50%);
+    z-index: 1;
+    padding: 2rem;
+    h2 {
+      font-weight: 350;
+    }
+    pointer-events: bounding-box;
+  }
+  .icon-container-outer {
+    width: 100%;
+    display: flex;
+    line-height: 1.9rem;
+    justify-content: space-around;
+    .icon-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .booknow-boxitem {
+    line-height: 1.9rem;
+    margin: 3rem 0rem;
+  }
+
+  .edit-property-btn {
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+  }
+  .primary-btn {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    line-height: 1.9rem;
+    background-color: $button-primary-bg-color;
+    color: $button-primary-fg-color;
+    border: none;
+    width: $button-primary-width;
+    height: $button-primary-height;
+    padding: $button-primary-padding;
+    border-radius: $button-primary-br-radius;
+  }
+}
+
+img {
+  object-fit: contain;
+}

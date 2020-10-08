@@ -1,0 +1,9 @@
+@import "../variables.scss";
+
+.btn-primary {
+  background-color: $button-primary-bg-color;
+  color: $button-primary-fg-color;
+  border-radius: $button-primary-br;
+  width: $button-primary-width;
+  height: $button-primary-height;
+}

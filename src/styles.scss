@@ -1,0 +1,30 @@
+@import "variables.scss";
+
+@font-face {
+  font-family: "open sans";
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: $base-fontSize;
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    padding: 0px;
+    margin: 0px;
+  }
+  body {
+    font-family: $font-family;
+    font-size: 1.6rem;
+    line-height: 2;
+    background: $bg-color;
+
+    .ReactModal__Overlay,
+    .ReactModal__Overlay--after-open {
+      z-index: 99999999;
+    }
+  }
+}
