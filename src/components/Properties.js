@@ -1,7 +1,7 @@
 import React from "react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Bed, BathTub, Sofa, Edit } from "../assets";
+import { Bed, BathTub, Sofa, Edit } from "../assets/icons";
 import Card from "./Card";
 import CardItem from "./CardItem";
 import Button from "./Button";

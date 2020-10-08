@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { getProperties, updateProperty } from "./api";
 import { Card, CardItem, Properties, Button, Login, Input } from "./components";
-import { Cross } from "./assets";
+import { Cross } from "./assets/icons";
 import "./app.scss";
 
 function App() {
