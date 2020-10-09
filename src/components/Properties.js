@@ -132,7 +132,7 @@ function Properties({
                   </p>
                 </CardItem>
                 <CardItem className="booknow-boxitem button-container-outer">
-                  <Button className="primary-btn" value="Book Now" />
+                  <Button className="primary-btn" value="BOOk NOW" />
                 </CardItem>
               </Card>
             </Swiper>

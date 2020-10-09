@@ -12,16 +12,48 @@ html {
   *,
   *:before,
   *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
+    font-family: "open sans";
     padding: 0px;
     margin: 0px;
   }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    body {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    body {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    body {
+      font-size: 1.33rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    body {
+      font-size: 1.55rem;
+    }
+  }
+  @media (min-width: 1600px) {
+    body {
+      font-size: 1.8rem;
+    }
+  }
+  @media (min-width: 1900px) {
+    body {
+      font-size: 2rem;
+    }
+  }
   body {
     font-family: $font-family;
-    font-size: 1.6rem;
     line-height: 2;
     background: $bg-color;
-
     .ReactModal__Overlay,
     .ReactModal__Overlay--after-open {
       z-index: 99999999;

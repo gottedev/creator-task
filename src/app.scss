@@ -33,7 +33,6 @@
 }
 
 .primary-btn {
-  font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.2rem;
   line-height: 1.9rem;
@@ -42,7 +41,7 @@
   border: none;
   width: $button-primary-width;
   height: $button-primary-height;
-  padding: $button-primary-padding;
+  padding: 2.5%;
   border-radius: $button-primary-br-radius;
 }
 .property-edit-card-outer {
@@ -68,7 +67,6 @@
       }
     }
     .primary-btn {
-      font-size: 1.8rem;
       font-weight: 400;
       letter-spacing: 0.2rem;
       line-height: 1.9rem;
@@ -77,9 +75,12 @@
       border: none;
       width: $button-primary-width;
       height: $button-primary-height;
-      padding: 1rem;
+      padding: 3.5%;
       margin: 1rem 0rem;
       border-radius: $button-primary-br-radius;
+      h2 {
+        font-weight: bolder;
+      }
     }
   }
 }
