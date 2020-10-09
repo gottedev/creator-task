@@ -8,7 +8,7 @@ function Button({ type, className, value, clickHandler, styles }) {
         styles={styles}
         onClick={clickHandler}
       >
-        {value}
+        <h2>{value}</h2>
       </button>
     </div>
   );
