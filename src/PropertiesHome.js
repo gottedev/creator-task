@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { compose } from "recompose";
-import { ErrorBoundary, WithAuth } from "./assets/hocs";
+import { WithAuth } from "./assets/hocs";
 import { Properties } from "./components";
 import { setProperties } from "./actions";
 import "./app.scss";
