@@ -81,9 +81,13 @@ function UpdatePropertyModal({
     setPrice(e.target.value);
   };
   const handleAvailability = (date) => {
-    const formatDate = defaultDate(date);
-    setDate(date);
-    setAvailability(formatDate);
+    if (date) {
+      const formatDate = defaultDate(date);
+      setDate(date);
+      setAvailability(formatDate);
+    } else {
+      setDate(date);
+    }
   };
   const handleBookNowURL = (e) => {
     setBookNowURL(e.target.value);
