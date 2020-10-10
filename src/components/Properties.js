@@ -4,7 +4,9 @@ import { compose } from "recompose";
 import { bindActionCreators } from "redux";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import moment from "moment";
 import { Bed, BathTub, Sofa, Edit } from "../assets/icons";
+import { WithLoader } from "../assets/hocs";
 import {
   setUpdatedProperty,
   setAllPropertyDetails,
@@ -20,7 +22,6 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
-import { WithLoader } from "../assets/hocs";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -37,6 +38,8 @@ function Properties({
     handleAllPropertyDetails(values);
     handleModal(true);
   };
+
+  const formatDate = (date) => moment(date).format("DD MMM YYYY");
 
   if (!isLoading) {
     for (let key in data) {
@@ -106,7 +109,7 @@ function Properties({
                   </h2>
                 </CardItem>
                 <CardItem className="booknow-boxitem availability-container-outer">
-                  <p>Available from {availableDate}</p>
+                  <p>Available from {formatDate(availableDate)}</p>
                 </CardItem>
                 <CardItem className="booknow-boxitem icon-container-outer">
                   <div className="icon-container">

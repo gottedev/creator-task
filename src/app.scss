@@ -66,6 +66,13 @@
         padding: 0.4rem;
       }
     }
+    .property-edit-modal-item
+      .react-datepicker-wrapper
+      .react-datepicker__input-container {
+      input {
+        min-width: 100%;
+      }
+    }
     .primary-btn {
       font-weight: 400;
       letter-spacing: 0.2rem;

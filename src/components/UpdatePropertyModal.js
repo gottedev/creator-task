@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
+import moment from "moment";
 import { connect } from "react-redux";
 import { compose } from "recompose";
 import { bindActionCreators } from "redux";
+import DatePicker from "react-datepicker";
 import { Cross } from "../assets/icons";
 import Card from "./Card";
 import CardItem from "./CardItem";
 import Button from "./Button";
 import Input from "./Input";
 import * as actions from "../actions";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 function UpdatePropertyModal({
   propertiesData,
@@ -35,6 +39,16 @@ function UpdatePropertyModal({
     propertyPrice,
     uniquePropertyId,
   } = propertiesData.property;
+
+  const defaultDate = (date) => moment(date).format("YYYY-MM-DD");
+
+  Modal.setAppElement("#modal");
+
+  const [date, setDate] = useState(null);
+
+  useEffect(() => {
+    setDate(new Date(availableDate));
+  }, [availableDate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -66,8 +80,10 @@ function UpdatePropertyModal({
   const handlePrice = (e) => {
     setPrice(e.target.value);
   };
-  const handleAvailability = (e) => {
-    setAvailability(e.target.value);
+  const handleAvailability = (date) => {
+    const formatDate = defaultDate(date);
+    setDate(date);
+    setAvailability(formatDate);
   };
   const handleBookNowURL = (e) => {
     setBookNowURL(e.target.value);
@@ -119,11 +135,12 @@ function UpdatePropertyModal({
               />
             </CardItem>
             <CardItem className="property-edit-modal-item">
-              <Input
-                type="text"
-                label="Availability"
-                value={availableDate}
+              <label htmlFor="date-picker">Available Date</label>
+              <DatePicker
+                id="date-picker"
+                selected={date}
                 onChange={handleAvailability}
+                isClearable
               />
             </CardItem>
             <CardItem className="property-edit-modal-item">

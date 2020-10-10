@@ -3,7 +3,6 @@ import axios from "axios";
 const BASE_URL = process.env.REACT_APP_BaseUrl;
 
 const getProperties = async () => {
-  console.log("hereeee");
   const url = `${BASE_URL}/properties`;
   const properties = await axios.get(url);
   const { data } = properties;

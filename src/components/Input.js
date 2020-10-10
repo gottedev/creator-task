@@ -33,7 +33,7 @@ function Input({
 Input.propTypes = {
   label: PropTypes.string,
   placeHolder: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   className: PropTypes.string,
   type: PropTypes.string,
   onChangeHandler: PropTypes.func,

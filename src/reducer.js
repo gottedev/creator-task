@@ -11,7 +11,7 @@ const initialState = {
   property: {
     propertyName: "",
     propertyAddress: "",
-    availableDate: "",
+    availableDate: null,
     bookNowUrl: "",
     numberOfBedroom: 0,
     numberOfBathroom: 0,
