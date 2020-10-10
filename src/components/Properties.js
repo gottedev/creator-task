@@ -12,7 +12,7 @@ import {
   setAllPropertyDetails,
   toggleModal,
 } from "../actions";
-import WithModal from "../assets/hocs/WithModal";
+import { WithLoader, WithModal } from "../assets/hocs";
 import Card from "./Card";
 import CardItem from "./CardItem";
 import Button from "./Button";
@@ -25,12 +25,7 @@ import "swiper/components/scrollbar/scrollbar.scss";
 
 SwiperCore.use([Navigation, Pagination]);
 
-function Properties({
-  propertiesData,
-  upadatePropertyData,
-  handleModal,
-  handleAllPropertyDetails,
-}) {
+function Properties({ propertiesData, handleModal, handleAllPropertyDetails }) {
   let updatedData = [];
   const { properties: data, isLoading, isAdmin } = propertiesData;
 
