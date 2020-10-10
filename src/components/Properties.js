@@ -12,7 +12,7 @@ import {
   setAllPropertyDetails,
   toggleModal,
 } from "../actions";
-import { WithLoader, WithModal } from "../assets/hocs";
+import WithModal from "../assets/hocs/WithModal";
 import Card from "./Card";
 import CardItem from "./CardItem";
 import Button from "./Button";

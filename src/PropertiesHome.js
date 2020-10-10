@@ -13,9 +13,7 @@ const PropertiesHome = ({ getPropertiesData }) => {
   }, []);
   return (
     <div className="App">
-      <ErrorBoundary>
-        <Properties />
-      </ErrorBoundary>
+      <Properties />
     </div>
   );
 };
