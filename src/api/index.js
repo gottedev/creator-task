@@ -1,6 +1,11 @@
 import axios from "axios";
 
-const BASE_URL = process.env.REACT_APP_BaseUrl;
+const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? process.env.REACT_APP_ProdUrl
+    : process.env.REACT_APP_BaseUrl;
+
+console.log(process.env.NODE_ENV, "env check");
 
 const getProperties = async () => {
   const url = `${BASE_URL}/properties`;
