@@ -34,6 +34,11 @@ function Properties({ propertiesData, handleModal, handleAllPropertyDetails }) {
     handleModal(true);
   };
 
+  const bookNowHandler = (value) => {
+    console.log("url", `${value}`);
+    window.open(value, "_blank");
+  };
+
   const formatDate = (date) => moment(date).format("DD MMM YYYY");
 
   if (!isLoading) {
@@ -49,7 +54,7 @@ function Properties({ propertiesData, handleModal, handleAllPropertyDetails }) {
       const bookNowUrl = data[key]["book_now_url"];
       const propertyPrice = data[key]["price_per_person_per_week"];
       updatedData.push(
-        <div style={{ position: "relative" }} key={key}>
+        <div className="book-now-box-outer" key={key}>
           <div style={{ marginBottom: "20px" }}>
             <Swiper
               spaceBetween={20}
@@ -65,12 +70,7 @@ function Properties({ propertiesData, handleModal, handleAllPropertyDetails }) {
                   }}
                   key={index}
                 >
-                  <img
-                    src={photos.photo}
-                    width="100%"
-                    height="100%"
-                    alt="test"
-                  />
+                  <img src={photos.photo} alt="test" />
                 </SwiperSlide>
               ))}
               <Card>
@@ -130,7 +130,11 @@ function Properties({ propertiesData, handleModal, handleAllPropertyDetails }) {
                   </p>
                 </CardItem>
                 <CardItem className="booknow-boxitem button-container-outer">
-                  <Button className="primary-btn" value="BOOk NOW" />
+                  <Button
+                    className="primary-btn"
+                    value="BOOK NOW"
+                    clickHandler={() => bookNowHandler(bookNowUrl)}
+                  />
                 </CardItem>
               </Card>
             </Swiper>

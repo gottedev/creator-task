@@ -48,7 +48,7 @@ function UpdatePropertyModal({
 
   useEffect(() => {
     setDate(new Date(availableDate));
-  }, [availableDate]);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();

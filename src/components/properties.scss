@@ -35,6 +35,7 @@
     z-index: 1;
     padding: 2.5%;
     pointer-events: bounding-box;
+    border-radius: $button-primary-br-radius;
   }
   .icon-container-outer {
     width: 100%;
@@ -48,67 +49,73 @@
     }
   }
 
-  .booknow-boxitem,
-  .title-container-outer {
-    h2 {
-      font-weight: 300;
-      font-style: normal;
-      line-height: 2.5rem;
-      letter-spacing: 0.05rem;
-    }
-  }
-  .booknow-boxitem,
-  .availability-container-outer {
-    p {
-      font-weight: 300;
-      font-style: normal;
-      line-height: 1.9rem;
-      color: $text-secondary-color;
-    }
-  }
-  .booknow-boxitem,
-  .icon-container-outer {
-    p {
-      font-weight: 300;
-      font-style: normal;
-      line-height: 1.6rem;
-    }
-  }
-  .booknow-boxitem,
-  .bills-container-outer {
-    p {
-      span {
-        font-weight: bolder;
+  .book-now-box-outer {
+    position: relative;
+    .booknow-boxitem,
+    .title-container-outer {
+      h2 {
+        font-weight: 300;
+        font-style: normal;
+        line-height: 2.5rem;
+        letter-spacing: 0.05rem;
       }
-      font-weight: normal;
-      font-style: normal;
-      line-height: 1.9rem;
     }
-  }
-  .booknow-boxitem,
-  .button-container-outer {
-    .primary-btn {
-      font-weight: normal;
-      letter-spacing: 0.2rem;
-      line-height: 1.9rem;
-      background-color: $button-primary-bg-color;
-      color: $button-primary-fg-color;
-      border: none;
-      max-height: 100%;
-      width: $button-primary-width;
-      height: $button-primary-height;
-      padding: 3.5%;
-      border-radius: $button-primary-br-radius;
+    .booknow-boxitem,
+    .availability-container-outer {
+      p {
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.9rem;
+        color: $text-secondary-color;
+      }
+    }
+    .booknow-boxitem,
+    .icon-container-outer {
+      p {
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.6rem;
+      }
+    }
+    .booknow-boxitem,
+    .bills-container-outer {
+      p {
+        span {
+          font-weight: bolder;
+        }
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.9rem;
+      }
+    }
+    .booknow-boxitem,
+    .button-container-outer {
+      .primary-btn {
+        font-weight: normal;
+        letter-spacing: 0.2rem;
+        line-height: 1.9rem;
+        background-color: $button-primary-bg-color;
+        color: $button-primary-fg-color;
+        border: none;
+        max-height: 100%;
+        width: $button-primary-width;
+        height: $button-primary-height;
+        padding: 3.5%;
+        border-radius: $button-primary-br-radius;
+      }
+    }
+
+    .edit-property-btn {
+      position: absolute;
+      right: 2rem;
+      cursor: pointer;
     }
   }
 
-  .edit-property-btn {
-    position: absolute;
-    right: 2rem;
-    cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: $button-primary-br-radius;
   }
-}
-
-img {
-  object-fit: contain;
 }
