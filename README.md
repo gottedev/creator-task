@@ -9,7 +9,7 @@ Thanks for the coding challenge
 
 ## App Architecture
 
-1.Front end is deployed on AWS Amplify and backend is deployed on AWS Lambda
+1.Front end is deployed on AWS Amplify and backend is deployed on Heroku
 2.Every view Element like Button is a view Component, Completely Reusable and customizable from outside <br/>
 3.Icons are also made reusable and can be imported from assets/icons<br/>
 4.App consumes Higher order components like withLoader, withAuth and withModal which takes reusability to next level<br/>
